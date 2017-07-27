@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Erros-->
+    <string name="api_error">Error</string>
+    <string name="api_network_issue">Network Issue</string>
+    <string name="api_network_issue_messgae">There is an error with network or host</string>
+
+    <string name="api_network_not_available">Network not available</string>
+    <string name="ok">Ok</string>
+
+
+</resources>
