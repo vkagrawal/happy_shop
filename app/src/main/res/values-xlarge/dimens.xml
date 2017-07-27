@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">48dp</dimen>
+    <dimen name="activity_vertical_margin">48dp</dimen>
+
+    <!--Style-->
+    <!--et_style-->
+    <dimen name="et_padding_top">10dp</dimen>
+    <dimen name="et_padding_bottom">10dp</dimen>
+    <dimen name="et_padding_left">10dp</dimen>
+    <dimen name="et_padding_right">10dp</dimen>
+    <dimen name="et_txt_size">22sp</dimen>
+    <dimen name="et_margin_top">20dp</dimen>
+
+    <!--et_dialgo_style-->
+    <dimen name="et_dialog_padding_top">10dp</dimen>
+    <dimen name="et_dialog_padding_bottom">10dp</dimen>
+    <dimen name="et_dialog_padding_left">10dp</dimen>
+    <dimen name="et_dialog_padding_right">10dp</dimen>
+    <dimen name="et_dialog_txt_size">22sp</dimen>
+    <dimen name="et_dialog_margin_top">20dp</dimen>
+
+    <!--btn_style-->
+    <dimen name="btn_padding_top">10sp</dimen>
+    <dimen name="btn_padding_bottom">10sp</dimen>
+    <dimen name="btn_padding_left">10sp</dimen>
+    <dimen name="btn_padding_right">10sp</dimen>
+    <dimen name="btn_txt_size">22sp</dimen>
+    <dimen name="btn_margin_top">20dp</dimen>
+
+    <!--Common Sizes-->
+    <dimen name="minor_padding">20dp</dimen>
+    <dimen name="major_padding">25dp</dimen>
+
+</resources>
