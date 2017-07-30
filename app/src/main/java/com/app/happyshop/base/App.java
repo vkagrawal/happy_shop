@@ -58,8 +58,16 @@ public class App extends Application {
         return App._instance;
     }
 
+    public static void printToastLong(int id) {
+        printToastLong(getAppContext().getResources().getString(id));
+    }
+
     public static void printToastLong(String message) {
         Toast.makeText(App.getAppContext(), message, Toast.LENGTH_LONG).show();
+    }
+
+    public static void printToast(int id) {
+        printToast(getAppContext().getResources().getString(id));
     }
 
     public static void printToast(String message) {

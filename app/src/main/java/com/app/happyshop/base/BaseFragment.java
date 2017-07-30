@@ -13,6 +13,7 @@ public abstract class BaseFragment extends Fragment {
 
     public static final String EXTRA_DATA_LAYOUT = "sc_extra_layout";
     public static final String EXTRA_DATA_TAG = "sc_extra_tag";
+    public static final String EXTRA_DATA_PARCELABLE = "sc_extra_Parcelable";
 
     public BaseActivity mActivity;
     public Resources resources;
@@ -25,25 +26,27 @@ public abstract class BaseFragment extends Fragment {
         public void setCurrentFrag(BaseFragment frag);
 
         public BaseFragment getCurrentFrag();
+
+        public void setActionBarTitle(String title);
+
+        public void isShowBackHome(boolean isShow);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         mCallback.setCurrentFrag(this);
+        mCallback.isShowBackHome(true);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mActivity		=	(BaseActivity) this.getActivity();
+        mActivity = (BaseActivity) this.getActivity();
         resources = getResources();
         Bundle args = this.getArguments();
-        if(args != null) {
+        if (args != null) {
             this._layout = args.getInt(EXTRA_DATA_LAYOUT);
-            if(args.containsKey(EXTRA_DATA_TAG)) {
-                this._extraTag = args.getString(EXTRA_DATA_TAG);
-            }
         }
     }
 
@@ -74,12 +77,14 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            if(mCallback == null)
+            if (mCallback == null)
                 mCallback = (FragmentSelectControl) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement Interface");
         }
     }
+
+    public abstract void notifyNetworkStateChange(boolean isNetworkAvailable);
 
 }

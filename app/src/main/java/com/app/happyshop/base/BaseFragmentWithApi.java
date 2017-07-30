@@ -1,5 +1,6 @@
 package com.app.happyshop.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.widget.Toast;
@@ -66,19 +67,31 @@ public abstract class BaseFragmentWithApi extends BaseFragment implements View.O
 
     }
 
-   /* private Map<String, String> getParams(String code){
-        Map<String, String> params = new HashMap<>();
-        switch (code){
-            case Test:
-                params.put("access_token", getToken() );
-                params.put("client_id", getUserId() );
-            break;
-        }
-        return params;
-    }*/
-
     public abstract void errorResponseHandler(JSONObject jsonObject, ApiNames serviceTaskType);
 
     public abstract void responseHandler(JSONObject jsonObject, ApiNames serviceTaskType);
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mCallback = (FragmentSelectControl) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement Interface");
+        }
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            if (mCallback == null)
+                mCallback = (FragmentSelectControl) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement Interface");
+        }
+    }
 
 }
