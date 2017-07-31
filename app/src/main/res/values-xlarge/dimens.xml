@@ -32,4 +32,12 @@
     <dimen name="minor_padding">20dp</dimen>
     <dimen name="major_padding">25dp</dimen>
 
+    <!--ImageSize-->
+    <dimen name="row_image">200dp</dimen>
+    <dimen name="cell_height">250dp</dimen>
+
+    <!--TextSize-->
+    <dimen name="row_title">18sp</dimen>
+    <dimen name="tab_icon_size">40dp</dimen>
+
 </resources>
