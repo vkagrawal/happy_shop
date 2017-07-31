@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    card_view:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/rowItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/minor_padding">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.loopj.android.image.SmartImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_image"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/minor_padding"
+                android:maxLines="2"
+                android:lines="2"
+                android:paddingLeft="@dimen/minor_padding"
+                android:paddingRight="@dimen/minor_padding"
+                android:textSize="@dimen/row_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/minor_padding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/minor_padding"
+                android:paddingRight="@dimen/minor_padding">
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/row_title" />
+
+                <TextView
+                    android:id="@+id/productOnSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/on_sale"
+                    android:textColor="@color/onSaleText"
+                    android:textSize="@dimen/row_title" />
+            </LinearLayout>
+
+            <!--    <View style="@style/divider" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
