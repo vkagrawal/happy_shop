@@ -1,8 +1,8 @@
 package com.app.happyshop.dbhelper;
 
 
-public class DBString extends BaseType{
-      String fieldDb;
+public class DBString extends BaseType {
+    String fieldDb;
 
     public DBString() {
         this.pkValueDb = false;
@@ -23,7 +23,7 @@ public class DBString extends BaseType{
     }
 
     @Override
-    public String getFieldType(){
+    public String getFieldType() {
         return STRING_TY;
     }
 }

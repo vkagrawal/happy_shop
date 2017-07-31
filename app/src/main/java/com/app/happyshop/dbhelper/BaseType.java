@@ -13,7 +13,7 @@ public class BaseType implements Serializable {
     public static final String BOOLEAN_TY = "boolean";
 
 
-    public String getFieldType(){
+    public String getFieldType() {
         return null;
     }
 
@@ -28,31 +28,31 @@ public class BaseType implements Serializable {
         return pkValueDb;
     }
 
-    public String getClassName(){
+    public String getClassName() {
         return this.getClass().getSimpleName();
     }
 
     public String toString() {
-        StringBuilder str = new StringBuilder(""+getClassName()+" [");
+        StringBuilder str = new StringBuilder("" + getClassName() + " [");
         String separator = "";
         Field[] fields = this.getClass().getDeclaredFields();
         for (int i = 0; i < fields.length; i++) {
             Field field = fields[i];
             String fieldStr = field.toString();
-            if(fieldStr.contains(getClassName())){
-                String fieldName = fieldStr.split("."+ getClassName()+".")[1];
+            if (fieldStr.contains(getClassName())) {
+                String fieldName = fieldStr.split("." + getClassName() + ".")[1];
                 Log.e("BaseType fieldName ", "" + fieldName);
-                if(fieldName.contains("Db")) {
+                if (fieldName.contains("Db")) {
                     try {
-                        str.append(separator+fieldName+" = "+field.get(this));
-                        separator=",";
+                        str.append(separator + fieldName + " = " + field.get(this));
+                        separator = ",";
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
                 }
             }
         }
-        str.append(", pkValueDb = "+ this.isPkValueDb());
+        str.append(", pkValueDb = " + this.isPkValueDb());
         str.append("]");
         return str.toString();
     }

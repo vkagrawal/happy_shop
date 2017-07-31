@@ -1,7 +1,7 @@
 package com.app.happyshop.dbhelper;
 
-public class DBint extends BaseType{
-      int fieldDb;
+public class DBint extends BaseType {
+    int fieldDb;
 
     public DBint() {
         this.pkValueDb = false;
@@ -22,7 +22,7 @@ public class DBint extends BaseType{
     }
 
     @Override
-    public String getFieldType(){
+    public String getFieldType() {
         return INT_TY;
     }
 }

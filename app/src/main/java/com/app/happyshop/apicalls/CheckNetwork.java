@@ -12,6 +12,7 @@ import android.util.Log;
 public class CheckNetwork {
 
     private static CheckNetwork _instance = null;
+    private AlertDialog.Builder mAlertDialog;
 
     public static CheckNetwork getInstance() {
         if (_instance == null) {
@@ -24,6 +25,7 @@ public class CheckNetwork {
 
     /**
      * check wheather network available or not either wi-fi of mobile network
+     *
      * @param mContext
      * @return
      */
@@ -54,7 +56,9 @@ public class CheckNetwork {
     }
 
     public void ShowDialog(final Context mContext) {
-        AlertDialog.Builder mAlertDialog = new AlertDialog.Builder(mContext);
+        if (mAlertDialog == null) {
+            mAlertDialog = new AlertDialog.Builder(mContext);
+        }
         // Setting Dialog Title
         mAlertDialog.setTitle("Networke is not available")
                 .setMessage("No internet connectivity found")

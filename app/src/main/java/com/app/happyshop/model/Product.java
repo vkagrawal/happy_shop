@@ -28,7 +28,7 @@ public class Product extends AppDbBaseModel {
             this.price = makeStr(jsonObject.getString("price"));
             this.imgUrl = makeStr(jsonObject.getString("img_url"));
             this.underSale = makeBoolean(jsonObject.getBoolean("under_sale"));
-            if(jsonObject.has("description")) {
+            if (jsonObject.has("description")) {
                 this.description = makeStr(jsonObject.getString("description"));
             }
         } catch (JSONException e) {
@@ -36,7 +36,8 @@ public class Product extends AppDbBaseModel {
         }
     }
 
-    public Product() {}
+    public Product() {
+    }
 
     public int getId() {
         return (int) id.getFieldDb();
@@ -146,7 +147,7 @@ public class Product extends AppDbBaseModel {
 
     public static Product _instance = new Product();
 
-    public static Product getInstance(){
+    public static Product getInstance() {
         return _instance;
     }
 }

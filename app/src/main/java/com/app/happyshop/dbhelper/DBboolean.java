@@ -1,8 +1,8 @@
 package com.app.happyshop.dbhelper;
 
 
-public class DBboolean extends BaseType{
-      boolean fieldDb;
+public class DBboolean extends BaseType {
+    boolean fieldDb;
 
     public DBboolean() {
     }
@@ -20,11 +20,11 @@ public class DBboolean extends BaseType{
         this.fieldDb = field;
     }
 
-    public boolean getFieldValue(){
+    public boolean getFieldValue() {
         return fieldDb;
     }
 
-    public String getFieldType(){
+    public String getFieldType() {
         return BOOLEAN_TY;
     }
 }

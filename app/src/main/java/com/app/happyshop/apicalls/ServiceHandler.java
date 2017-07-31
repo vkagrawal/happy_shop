@@ -45,7 +45,7 @@ public class ServiceHandler {
         if (isTakeOnlyPath) {
             return path;
         }
-        return "http://" + Requests.getSubDomain() + Requests.baseUrl + Requests.middleUrl + path;
+        return "https://" + Requests.getSubDomain() + Requests.baseUrl + Requests.middleUrl + path;
         //return "http://requestb.in/1b3ocol1";
     }
 
