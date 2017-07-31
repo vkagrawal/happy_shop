@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/categories"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textColor="@color/buttonTextColor"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/makeup"
+        style="@style/home_btn_plan_style"
+        android:background="@drawable/btn_rounded_corner_top"
+        android:text="@string/makeup" />
+
+    <Button
+        android:id="@+id/skinCare"
+        style="@style/home_btn_plan_style"
+        android:text="@string/skin_care" />
+
+    <Button
+        android:id="@+id/hair"
+        style="@style/home_btn_plan_style"
+        android:text="@string/hair" />
+
+    <Button
+        android:id="@+id/toolsBrushes"
+        style="@style/home_btn_plan_style"
+        android:background="@drawable/btn_rounded_corner_bottom"
+        android:text="@string/tools_brushes" />
+
+</LinearLayout>

@@ -152,7 +152,7 @@ public class MainActivity extends BaseNetworkNotifyActivity {
                 if (tabId.equals(FAVOURITE)) {
                     selectLastSelectedTab();
                 } else if (tabId.equals(CATEGORIES)) {
-                    // pushFragments(tabId, HomeFragment.create(), true, true);
+                    pushFragments(tabId, HomeFragment.create(), true, true);
                 } else if (tabId.equals(WISHLIST)) {
                     selectLastSelectedTab();
                 } else if (tabId.equals(CART)) {
